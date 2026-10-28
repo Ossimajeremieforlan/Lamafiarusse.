@@ -1,301 +1,34 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAMAFIARUSSE | Streetwear</title>
-<meta name="description" content="LAMAFIARUSSE — Streetwear, style et élégance. Découvre notre univers.">
-
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LAMAFIARUSSE — Sport / Streetwear / Lifestyle</title><meta name="description" content="LAMAFIARUSSE : sport, streetwear et lifestyle.">
 <style>
-:root {
-  --green: #39ff14;
-  --black: #050505;
-  --white: #ffffff;
-  --grey: #aaaaaa;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-}
-a { color: inherit; text-decoration: none; }
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 6%;
-  border-bottom: 1px solid #263d20;
-  position: relative;
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-.brand img {
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
-}
-.brand span { color: var(--green); }
-nav { display: flex; gap: 22px; font-size: 14px; }
-nav a:hover { color: var(--green); }
-
-.hero {
-  min-height: 570px;
-  padding: 75px 7%;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(ellipse at 85% 50%, #17330f 0%, #050505 58%);
-}
-.hero-content { max-width: 700px; }
-.eyebrow {
-  color: var(--green);
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: bold;
-}
-h1 {
-  font-size: clamp(43px, 8vw, 82px);
-  line-height: .98;
-  margin: 24px 0;
-  letter-spacing: -3px;
-}
-h1 span, .green { color: var(--green); }
-.hero p {
-  color: #cccccc;
-  line-height: 1.8;
-  max-width: 460px;
-}
-.button {
-  display: inline-block;
-  padding: 16px 24px;
-  background: var(--green);
-  color: #050505;
-  font-weight: 900;
-  font-size: 13px;
-  margin-top: 20px;
-}
-.button:hover { background: white; }
-.button-outline {
-  background: transparent;
-  color: white;
-  border: 1px solid var(--green);
-  margin-left: 8px;
-}
-
-section { padding: 65px 7%; }
-.section-head { margin-bottom: 30px; }
-.section-head h2 { font-size: 32px; margin: 10px 0; }
-.section-head p { color: var(--grey); line-height: 1.7; }
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-.product { min-width: 0; }
-.product-art {
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #111;
-  border: 1px solid #252525;
-  overflow: hidden;
-}
-.shirt {
-  width: 135px;
-  height: 150px;
-  background: #080808;
-  position: relative;
-  clip-path: polygon(25% 0, 40% 8%, 60% 8%,
-  75% 0, 100% 20%, 84% 42%, 73% 34%,
-  73% 100%, 27% 100%, 27% 34%, 16% 42%, 0 20%);
-  filter: drop-shadow(0 8px 10px #000);
-}
-.shirt.white { background: #eeeeee; }
-.shirt.green-shirt { background: var(--green); }
-.shirt::after {
-  content: "LR";
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 25px;
-  font-weight: 900;
-  color: var(--green);
-}
-.shirt.white::after { color: #111; }
-.shirt.green-shirt::after { color: #050505; }
-
-.product-info { padding: 16px 2px; }
-.product-info h3 { margin: 0 0 8px; }
-.product-info p { color: var(--grey); font-size: 13px; line-height: 1.6; }
-.status {
-  display: inline-block;
-  border: 1px solid #3b5535;
-  color: var(--green);
-  padding: 7px 9px;
-  font-size: 10px;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
-
-.about {
-  background: #101010;
-  border-top: 1px solid #202020;
-  border-bottom: 1px solid #202020;
-  text-align: center;
-}
-.about p {
-  max-width: 600px;
-  margin: 18px auto;
-  color: #cccccc;
-  line-height: 1.9;
-}
-.contact { text-align: center; }
-.contact p { color: var(--grey); line-height: 1.8; }
-
-footer {
-  padding: 28px 7%;
-  text-align: center;
-  border-top: 1px solid #263d20;
-  color: var(--grey);
-  font-size: 12px;
-  line-height: 2;
-}
-footer strong { color: var(--green); }
-
-@media (max-width: 650px) {
-  header { padding: 10px 4%; }
-  .brand { font-size: 12px; gap: 6px; }
-  .brand img { width: 48px; height: 48px; }
-  nav { gap: 10px; font-size: 11px; }
-  .hero { min-height: 490px; padding: 60px 6%; }
-  h1 { letter-spacing: -2px; }
-  .products { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .product-art { height: 190px; }
-  .shirt { transform: scale(.82); }
-  section { padding: 48px 5%; }
-  .section-head h2 { font-size: 27px; }
-  .button { padding: 14px 16px; font-size: 11px; }
-  .button-outline { margin-left: 0; }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <a class="brand" href="#accueil">
-    <img src="file_000000000420820e985ddbd9a9cbe614.png"
-         alt="Logo couronné LR LAMAFIARUSSE">
-    <span>LAMAFIA<span>RUSSE</span></span>
-  </a>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#collections">Collections</a>
-    <a href="#marque">Notre marque</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero" id="accueil">
-    <div class="hero-content">
-      <div class="eyebrow">STYLE · FORCE · ÉLÉGANCE</div>
-      <h1>TON STYLE.<br>TES <span>RÈGLES.</span></h1>
-      <p>
-        Bienvenue chez LAMAFIARUSSE.
-        Un univers streetwear imaginé pour celles et ceux
-        qui veulent affirmer leur style.
-        Noir, blanc et vert électrique.
-      </p>
-      <a class="button" href="#collections">DÉCOUVRIR NOS MODÈLES</a>
-      <a class="button button-outline" href="#marque">NOTRE UNIVERS</a>
-    </div>
-  </section>
-
-  <section id="collections">
-    <div class="section-head">
-      <div class="eyebrow">LA SÉLECTION LR</div>
-      <h2>Nos futurs <span class="green">essentiels.</span></h2>
-      <p>Des idées de modèles personnalisés autour de notre logo.</p>
-    </div>
-
-    <div class="products">
-      <article class="product">
-        <div class="product-art">
-          <div class="shirt"></div>
-        </div>
-        <div class="product-info">
-          <h3>Black Royal</h3>
-          <p>T-shirt noir · Logo LR</p>
-          <span class="status">MODÈLE EN PRÉPARATION</span>
-        </div>
-      </article>
-
-      <article class="product">
-        <div class="product-art">
-          <div class="shirt white"></div>
-        </div>
-        <div class="product-info">
-          <h3>White Crown</h3>
-          <p>T-shirt blanc · Signature LR</p>
-          <span class="status">MODÈLE EN PRÉPARATION</span>
-        </div>
-      </article>
-
-      <article class="product">
-        <div class="product-art">
-          <div class="shirt green-shirt"></div>
-        </div>
-        <div class="product-info">
-          <h3>Green Energy</h3>
-          <p>T-shirt vert · Style électrique</p>
-          <span class="status">MODÈLE EN PRÉPARATION</span>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="about" id="marque">
-    <div class="eyebrow">NOTRE IDENTITÉ</div>
-    <h2>Plus qu'un vêtement.<br><span class="green">Une attitude.</span></h2>
-    <p>
-      LAMAFIARUSSE est une marque en construction.
-      Notre ambition : développer nos propres designs,
-      mettre en valeur notre logo et proposer des vêtements
-      qui représentent notre identité.
-    </p>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="eyebrow">RESTE CONNECTÉ</div>
-    <h2>La suite arrive.</h2>
-    <p>
-      Nos modèles, nos prix et les modalités de commande
-      seront annoncés une fois confirmés.
-    </p>
-    <a class="button" href="#collections">REVOIR LES MODÈLES</a>
-  </section>
-</main>
-
-<footer>
-  <strong>LAMAFIARUSSE</strong><br>
-  TON STYLE. TES RÈGLES.<br>
-  © 2026 LAMAFIARUSSE — Tous droits réservés.
-</footer>
-
-</body>
-</html>
+:root{--g:#39ff14;--bg:#050706;--line:#31543a;--muted:#c0c5c1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.mast{display:grid;grid-template-columns:100px 1fr auto;gap:22px;align-items:center;padding:18px 4%;border-bottom:2px solid var(--g);background:linear-gradient(110deg,#030504,#0b180e 65%,#030504)}.logo{width:100px;height:100px;object-fit:contain}.wordmark{text-align:center}.wordmark h1{font-size:clamp(26px,5vw,58px);letter-spacing:clamp(1px,.7vw,6px);margin:0;font-weight:900}.wordmark h1 span, .wordmark p span{color:var(--g)}.wordmark p{font-size:12px;letter-spacing:5px;margin:12px 0 0}.motto{text-align:right;font:italic clamp(13px,2vw,23px) Georgia,serif}.motto b{display:block;color:var(--g);margin-top:8px}nav{display:flex;justify-content:center;gap:24px;padding:15px 8px;border-bottom:1px solid #26392b;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}nav a:hover{color:var(--g)}.intro{display:flex;align-items:end;justify-content:space-between;gap:14px;padding:22px 3%}.intro h2{font-size:clamp(20px,3vw,32px);margin:0}.green{color:var(--g)}.intro p{color:var(--muted);font-size:13px;margin:8px 0 0}.tag{color:var(--g);font-size:11px;letter-spacing:2px;white-space:nowrap}.catalog{padding:0 1.2%}.category{padding-bottom:12px;margin-bottom:10px;border-bottom:1px solid var(--line)}.cathead{display:flex;align-items:center;gap:12px;padding:12px 10px}.caticon{font-size:25px;color:var(--g)}.cathead h3{font-size:clamp(18px,2vw,25px);margin:0;text-transform:uppercase}.rule{height:2px;background:linear-gradient(90deg,var(--g),transparent);flex:1}.count{font-size:11px;letter-spacing:2px;white-space:nowrap}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.card{min-width:0;background:#0b0e0c;border:1px solid #405348}.art{height:clamp(125px,17vw,225px);background:radial-gradient(ellipse at 50% 35%,#666b67,#282d29 58%,#111411);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.art:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 25%,#fff1 50%,transparent 72%);pointer-events:none}.thing{position:relative;filter:drop-shadow(0 8px 5px #0009)}.thing:after{content:"LR";position:absolute;top:42%;left:0;right:0;text-align:center;color:var(--g);font-size:15px;font-weight:900;text-shadow:0 0 5px #000}.tee{width:74px;height:96px;background:#080a09;clip-path:polygon(25% 0,40% 8%,60% 8%,75% 0,100% 20%,83% 39%,72% 31%,72% 100%,28% 100%,28% 31%,17% 39%,0 20%)}.white{background:#e8eae7}.greenitem{background:#1bdf17}.hoodie{width:78px;height:103px;background:#080a09;border-radius:12px;clip-path:polygon(25% 0,40% 12%,60% 12%,75% 0,100% 18%,88% 38%,77% 30%,77% 100%,23% 100%,23% 30%,12% 38%,0 18%)}.pants{width:75px;height:110px;background:#080a09;clip-path:polygon(8% 0,92% 0,100% 100%,58% 100%,50% 38%,42% 100%,0 100%)}.shorts{width:82px;height:68px;background:#080a09;clip-path:polygon(0 0,100% 0,94% 100%,56% 100%,50% 45%,44% 100%,6% 100%)}.jacket{width:84px;height:105px;background:#080a09;clip-path:polygon(25% 0,40% 8%,60% 8%,75% 0,100% 18%,85% 35%,75% 29%,75% 100%,25% 100%,25% 29%,15% 35%,0 18%)}.shoe{width:105px;height:40px;background:#080a09;border-radius:20px 28px 12px 10px;transform:rotate(-9deg);clip-path:polygon(8% 0,54% 5%,70% 35%,100% 48%,98% 80%,84% 100%,8% 100%,0 75%)}.shoe.white{background:#f0f1ed}.shoe.greenitem{background:#101511;border-bottom:8px solid var(--g)}.highshoe{width:83px;height:70px;background:#080a09;border-radius:12px;clip-path:polygon(20% 0,65% 0,70% 48%,100% 68%,96% 90%,80% 100%,8% 100%,0 78%,20% 52%)}.slides{width:95px;height:35px;background:#080a09;border-radius:8px 8px 22px 22px;transform:rotate(-8deg)}.bag{width:78px;height:83px;background:#080a09;border:3px solid #29372d;border-radius:10px}.bag:before{content:"";position:absolute;width:35px;height:23px;border:5px solid #080a09;border-bottom:0;border-radius:14px 14px 0 0;top:-23px;left:17px}.bag:after{content:"LR";position:absolute;top:35px;left:0;right:0;text-align:center;color:var(--g);font-size:16px;font-weight:900}.smallbag{width:85px;height:55px;border-radius:8px}.duffel{width:100px;height:56px;border-radius:14px}.belt{width:105px;height:40px;border-radius:20px}.info{padding:8px 9px 10px;min-height:62px}.topline{display:flex;align-items:baseline;gap:7px}.num{font-size:21px;color:var(--g);font-weight:900}.info h4{font-size:clamp(9px,1.05vw,13px);line-height:1.25;margin:0;text-transform:uppercase}.info p{color:var(--g);font-size:9px;letter-spacing:.5px;margin:7px 0 0}.benefits{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 5%;gap:12px;border-top:2px solid var(--line);border-bottom:1px solid var(--line);background:#080b09}.benefit{display:flex;justify-content:center;align-items:center;gap:12px;border-right:1px solid var(--g);padding:4px 10px}.benefit:last-child{border:0}.benefit>span{font-size:26px;color:var(--g)}.benefit b{display:block;font-size:12px}.benefit small{display:block;color:var(--muted);font-size:10px;margin-top:4px}footer{text-align:center;padding:25px 5%;font-size:12px;line-height:2;letter-spacing:2px;color:#aaa}footer strong{font-size:22px;color:white}footer strong span{color:var(--g)}
+@media(max-width:800px){.mast{grid-template-columns:62px 1fr;gap:10px;padding:12px 3%}.logo{width:62px;height:62px}.wordmark h1{letter-spacing:2px}.wordmark p{font-size:9px;letter-spacing:2px}.motto{display:none}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.art{height:165px}.info h4{font-size:11px}}@media(max-width:480px){nav{gap:13px;font-size:10px;letter-spacing:.5px}.intro{align-items:start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.art{height:185px}.info h4{font-size:12px}.benefits{grid-template-columns:1fr;gap:7px}.benefit{justify-content:flex-start;border-right:0;border-bottom:1px solid #26392b;padding:10px 15px}.benefit:last-child{border:0}.count{font-size:9px}}
+</style></head><body>
+<header class="mast" id="accueil"><img class="logo" src="file_000000000420820e985ddbd9a9cbe614.png" alt="Logo couronné LR LAMAFIARUSSE"><div class="wordmark"><h1>LAMAFIA<span>RUSSE</span></h1><p>SPORT <span>/</span> STREETWEAR <span>/</span> LIFESTYLE</p></div><div class="motto">Plus qu'une marque.<b>Un style de vie.</b></div></header>
+<nav><a href="#accueil">Accueil</a><a href="#vetements">Vêtements</a><a href="#chaussures">Chaussures</a><a href="#sacs">Sacs</a></nav>
+<div class="intro"><div><h2>TON STYLE. <span class="green">TES RÈGLES.</span></h2><p>Sport, streetwear et lifestyle : découvre l'univers LAMAFIARUSSE.</p></div><div class="tag">COLLECTION EN PRÉPARATION</div></div>
+<main class="catalog">
+<section class="category" id="vetements"><div class="cathead"><span class="caticon">♟</span><h3>Vêtements</h3><div class="rule"></div><span class="count">6 MODÈLES</span></div><div class="grid">
+<article class="card"><div class="art"><div class="thing tee"></div></div><div class="info"><div class="topline"><span class="num">1</span><h4>T-shirts</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing hoodie"></div></div><div class="info"><div class="topline"><span class="num">2</span><h4>Hoodies</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing jacket"></div><div class="thing pants" style="transform:translateX(33px) scale(.7)"></div></div><div class="info"><div class="topline"><span class="num">3</span><h4>Survêtements</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing shorts"></div></div><div class="info"><div class="topline"><span class="num">4</span><h4>Shorts</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing tee" style="height:110px;width:65px"></div></div><div class="info"><div class="topline"><span class="num">5</span><h4>T-shirts de compression</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing jacket"></div></div><div class="info"><div class="topline"><span class="num">6</span><h4>Vestes sportives</h4></div><p>PRIX À CONFIRMER</p></div></article></div></section>
+<section class="category" id="chaussures"><div class="cathead"><span class="caticon">⌁</span><h3>Chaussures</h3><div class="rule"></div><span class="count">6 MODÈLES</span></div><div class="grid">
+<article class="card"><div class="art"><div class="thing shoe white"></div></div><div class="info"><div class="topline"><span class="num">7</span><h4>Sneakers blanches</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing shoe greenitem"></div></div><div class="info"><div class="topline"><span class="num">8</span><h4>Running</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing highshoe"></div></div><div class="info"><div class="topline"><span class="num">9</span><h4>Baskets montantes</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing shoe white"></div></div><div class="info"><div class="topline"><span class="num">10</span><h4>Sneakers bicolores</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing shoe greenitem"></div></div><div class="info"><div class="topline"><span class="num">11</span><h4>Crampons de football</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing slides"></div></div><div class="info"><div class="topline"><span class="num">12</span><h4>Claquettes</h4></div><p>PRIX À CONFIRMER</p></div></article></div></section>
+<section class="category" id="sacs"><div class="cathead"><span class="caticon">▣</span><h3>Sacs</h3><div class="rule"></div><span class="count">6 MODÈLES</span></div><div class="grid">
+<article class="card"><div class="art"><div class="thing bag"></div></div><div class="info"><div class="topline"><span class="num">13</span><h4>Sacs à dos</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing bag smallbag"></div></div><div class="info"><div class="topline"><span class="num">14</span><h4>Sacoches</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing bag duffel"></div></div><div class="info"><div class="topline"><span class="num">15</span><h4>Sacs de sport</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing bag belt"></div></div><div class="info"><div class="topline"><span class="num">16</span><h4>Sacs banane</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing bag duffel"></div></div><div class="info"><div class="topline"><span class="num">17</span><h4>Sacs de voyage</h4></div><p>PRIX À CONFIRMER</p></div></article>
+<article class="card"><div class="art"><div class="thing bag"></div></div><div class="info"><div class="topline"><span class="num">18</span><h4>Sacs business</h4></div><p>PRIX À CONFIRMER</p></div></article></div></section></main>
+<div class="benefits"><div class="benefit"><span>♛</span><div><b>IDENTITÉ ORIGINALE</b><small>Un univers noir, blanc et vert</small></div></div><div class="benefit"><span>✦</span><div><b>COLLECTION EN PRÉPARATION</b><small>Les articles seront confirmés avant commande</small></div></div><div class="benefit"><span>LR</span><div><b>LAMAFIARUSSE</b><small>Sport / Streetwear / Lifestyle</small></div></div></div>
+<footer><strong>LAMAFIA<span class="green">RUSSE</span></strong><br>TON STYLE. TES RÈGLES.<br>© 2026 LAMAFIARUSSE — VISUELS ILLUSTRATIFS, PRIX À CONFIRMER</footer></body></html>
 
