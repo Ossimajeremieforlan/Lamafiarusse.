@@ -23,7 +23,243 @@ footer{min-height:130px;display:flex;align-items:center;justify-content:space-be
 
 .old-price{display:block;color:#888;text-decoration:line-through;font-size:.82em;margin-top:4px}
 .price{display:block;color:#b7ff00;font-weight:800}
-</style></head><body>
+/* ===== STYLE PREMIUM LAMAFIARUSSE ===== */
+
+:root {
+  --g: #39ff14;
+  --bg: #020503;
+  --line: #075b34;
+}
+
+body {
+  background: #020503;
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.top {
+  background: #000;
+  color: #ddd;
+  letter-spacing: .5px;
+}
+
+header {
+  background: radial-gradient(circle at 70%, #12351d, #020503 70%);
+  box-shadow: 0 5px 25px #000;
+}
+
+.logo {
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #39ff1460);
+}
+
+.brand h1 {
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #39ff1430;
+}
+
+nav {
+  background: #071009;
+  border-bottom: 1px solid #075b34;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  transition: color .2s, text-shadow .2s;
+}
+
+nav a:hover {
+  color: var(--g);
+  text-shadow: 0 0 10px var(--g);
+}
+
+.hero {
+  background-color: #061009;
+  border-bottom: 2px solid var(--g);
+}
+
+.hero h2 {
+  font-weight: 900;
+  line-height: 1.05;
+  text-shadow: 0 4px 15px #000;
+}
+
+.cta {
+  background: var(--g);
+  color: #001000;
+  border-radius: 5px;
+  font-weight: 900;
+  transition: .25s;
+}
+
+.cta:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+.catalog {
+  padding: 35px 4%;
+}
+
+.heading {
+  border-bottom: 1px solid #174d2a;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+
+.heading h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.heading span {
+  color: var(--g);
+}
+
+.product {
+  background: #0a100b;
+  border: 1px solid #193c22;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  border-color: var(--g);
+  box-shadow: 0 8px 25px #39ff1420;
+}
+
+.photo {
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo img {
+  transition: transform .4s;
+}
+
+.product:hover .photo img {
+  transform: scale(1.06);
+}
+
+.info {
+  padding: 13px;
+}
+
+.info strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.old-price {
+  color: #888;
+}
+
+.price {
+  color: var(--g);
+  font-size: 17px;
+  margin: 7px 0;
+}
+
+.info button {
+  width: 100%;
+  background: var(--g);
+  color: #001000;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 5px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.info button:hover {
+  background: white;
+  transform: scale(1.02);
+}
+
+.benefits {
+  background: #071009;
+  border-top: 1px solid #075b34;
+  border-bottom: 1px solid #075b34;
+  padding: 25px 4%;
+}
+
+.benefits div {
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.benefits b {
+  color: var(--g);
+  margin-right: 8px;
+}
+
+footer {
+  background: #000;
+  border-top: 2px solid var(--g);
+  padding: 30px 4%;
+}
+
+.footbrand strong {
+  font-weight: 900;
+}
+
+.social a {
+  transition: .2s;
+}
+
+.social a:hover {
+  color: var(--g);
+  transform: translateY(-3px);
+}
+
+#conditions {
+  background: #071009 !important;
+  border-top: 2px solid var(--g);
+  line-height: 1.7;
+}
+
+#conditions h2 {
+  color: var(--g) !important;
+  font-weight: 900;
+}
+
+#conditions h3 {
+  color: var(--g);
+  margin-top: 20px;
+}
+
+#conditions p {
+  color: #ddd;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .catalog {
+    padding: 25px 2%;
+  }
+
+  .product {
+    border-radius: 7px;
+  }
+
+  .info {
+    padding: 9px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+}</style></head><body>
 <div class="top"><span>🚚 Livraison partout au Gabon et à l'international</span><span><b>♛</b> LAMAFIARUSSE</span><span>♢ Paiement à confirmer</span></div>
 <header id="accueil"><img class="logo" src="file_000000000420820e985ddbd9a9cbe614.png" alt="Logo LAMAFIARUSSE"><div class="brand"><h1>LAMAFIA<span>RUSSE</span></h1><p>SPORT　<span class="green">/</span>　STREETWEAR　<span class="green">/</span>　LIFESTYLE</p></div><div class="actions"><button onclick="toggleSearch()" aria-label="Recherche">⌕</button><button onclick="showCart()" aria-label="Panier">🛒<span class="count" id="cartCount">0</span></button></div></header>
 <div class="search" id="search"><input id="q" placeholder="Rechercher un article…" oninput="filterItems()"></div>
