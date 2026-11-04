@@ -56,4 +56,24 @@ function showCart(){renderCart();document.getElementById('lr-cart-overlay').styl
 function orderOnWhatsApp(){if(!cart.length){alert('Ton panier est vide.');return;}let msg='Bonjour LAMAFIARUSSE ! Je souhaite commander :\n\n';cart.forEach(x=>msg+=x.name+' × '+x.qty+' = '+euro(x.price*x.qty)+'\n');msg+='\nTOTAL : '+euro(cart.reduce((n,x)=>n+x.price*x.qty,0));window.open('https://wa.me/24107441825?text='+encodeURIComponent(msg),'_blank');}
 function toggleSearch(){document.getElementById('search').classList.toggle('open')}
 function filterItems(){let q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.product').forEach(p=>p.style.display=p.dataset.name.includes(q)?'block':'none')}
-</script></body></html>
+</script> <section id="conditions" style="background:#071009;color:white;padding:30px 5%;border-top:2px solid #20c45a">
+  <h2 style="color:#20c45a">COMMANDES, ACHATS ET LIVRAISON</h2>
+
+  <h3>1. Passer une commande</h3>
+  <p>Choisissez vos articles, ajoutez-les au panier et envoyez votre demande sur WhatsApp.</p>
+
+  <h3>2. Confirmation</h3>
+  <p>Votre commande sera vérifiée avec vous avant validation.</p>
+
+  <h3>3. Paiement</h3>
+  <p>Les modalités de paiement vous seront communiquées avant toute validation. Ne payez pas avant confirmation.</p>
+
+  <h3>4. Livraison</h3>
+  <p>Nous proposons la livraison partout au Gabon. Elle est payante. Les frais dépendent de votre destination et seront communiqués avant confirmation.</p>
+
+  <h3>5. Disponibilité</h3>
+  <p>La disponibilité des articles et les délais seront confirmés avant l'achat.</p>
+
+  <h3>6. Nous contacter</h3>
+  <p>WhatsApp : 062779932</p>
+</section></body></html>
